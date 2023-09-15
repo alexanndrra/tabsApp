@@ -8,6 +8,7 @@
 
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -15,35 +16,34 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
             android:text="Dogs"
             tools:layout_editor_absoluteX="-3dp"
-            tools:layout_editor_absoluteY="25dp"
-            android:onClick="tabClicked"
-            android:id="@+id/dogsTabItem"
-            />
+            tools:layout_editor_absoluteY="25dp" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cats"
+            android:layout_gravity="center"
             tools:layout_editor_absoluteX="209dp"
-            tools:layout_editor_absoluteY="59dp"
-            android:id="@+id/catsTabItem"/>
+            tools:layout_editor_absoluteY="59dp" />
     </com.google.android.material.tabs.TabLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="254dp"
-        android:layout_height="145dp"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="423dp"
+        android:layout_height="679dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31"
-        app:srcCompat="@drawable/dog1"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
