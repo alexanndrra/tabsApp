@@ -36,9 +36,6 @@ public class VPAdapter extends FragmentPagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-
-
-
         return fragmentTitle.get(position);
     }
 }
